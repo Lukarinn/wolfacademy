@@ -11,7 +11,7 @@ const champions = [
     title: 'Acompanhamento Individual Personalizado',
     buttonText: 'Saber Mais',
     buttonVariant: 'primary' as const,
-    link: 'https://wolfacademycoach.lovable.app/#coach-individual',
+    link: 'https://wolfacademycoach.lovable.app/',
     imagePosition: 'center 20%'
   },
   {
