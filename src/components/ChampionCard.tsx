@@ -69,16 +69,22 @@ const ChampionCard = ({ image, tag, tagColor, title, buttonText, buttonVariant, 
         className="absolute inset-0 bg-cover bg-center"
         style={{
           backgroundImage: `url(${image})`,
-          scale: isHovered ? 1.1 : 1,
         }}
         animate={{
           scale: isHovered ? 1.1 : 1,
+          filter: isHovered ? 'brightness(1)' : 'brightness(0.5)',
         }}
         transition={{ duration: 0.4 }}
       />
       
       {/* Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-t from-background/95 via-background/40 to-background/20" />
+      <motion.div 
+        className="absolute inset-0 bg-gradient-to-t from-background/95 via-background/40 to-background/20"
+        animate={{
+          opacity: isHovered ? 0.3 : 1,
+        }}
+        transition={{ duration: 0.4 }}
+      />
       
       {/* Content */}
       <div 
