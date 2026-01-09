@@ -9,6 +9,7 @@ interface ChampionCardProps {
   buttonText: string;
   buttonVariant: 'primary' | 'secondary' | 'accent' | 'warning';
   link?: string;
+  imagePosition?: string;
 }
 
 const buttonStyles = {
@@ -18,7 +19,7 @@ const buttonStyles = {
   warning: 'bg-warning hover:bg-warning/90 text-warning-foreground',
 };
 
-const ChampionCard = ({ image, tag, tagColor, title, buttonText, buttonVariant, link = '#' }: ChampionCardProps) => {
+const ChampionCard = ({ image, tag, tagColor, title, buttonText, buttonVariant, link = '#', imagePosition = 'center top' }: ChampionCardProps) => {
   const ref = useRef<HTMLDivElement>(null);
   const [isHovered, setIsHovered] = useState(false);
   
@@ -65,10 +66,12 @@ const ChampionCard = ({ image, tag, tagColor, title, buttonText, buttonVariant, 
       onMouseLeave={handleMouseLeave}
     >
       {/* Background Image */}
-      <motion.div
-        className="absolute inset-0 bg-cover bg-center"
+      <motion.img
+        src={image}
+        alt=""
+        className="absolute inset-0 w-full h-full object-cover"
         style={{
-          backgroundImage: `url(${image})`,
+          objectPosition: imagePosition,
         }}
         animate={{
           scale: isHovered ? 1.1 : 1,

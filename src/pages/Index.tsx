@@ -11,7 +11,8 @@ const champions = [
     title: 'Jornada do Bronze ao Grão-Mestre',
     buttonText: 'Saber Mais',
     buttonVariant: 'primary' as const,
-    link: '#jornada-bronze'
+    link: '#jornada-bronze',
+    imagePosition: 'center 20%'
   },
   {
     image: champion2,
@@ -20,7 +21,8 @@ const champions = [
     title: 'Os Três Pilares para Subir de Elo',
     buttonText: 'Quero Participar',
     buttonVariant: 'secondary' as const,
-    link: '#tres-pilares'
+    link: '#tres-pilares',
+    imagePosition: 'center 15%'
   },
   {
     image: champion3,
@@ -29,7 +31,8 @@ const champions = [
     title: 'Jornada ao Ouro em 27 Dias',
     buttonText: 'Saber Mais',
     buttonVariant: 'accent' as const,
-    link: '#jornada-ouro'
+    link: '#jornada-ouro',
+    imagePosition: 'center 25%'
   }
 ];
 
