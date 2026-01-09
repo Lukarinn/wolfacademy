@@ -2,7 +2,6 @@ import ChampionCard from '@/components/ChampionCard';
 import champion1 from '@/assets/champion-1.jpg';
 import champion2 from '@/assets/champion-2.jpg';
 import champion3 from '@/assets/champion-3.jpg';
-import champion4 from '@/assets/champion-4.jpg';
 
 const champions = [
   {
@@ -28,14 +27,6 @@ const champions = [
     buttonText: 'Saber Mais',
     buttonVariant: 'accent' as const,
     link: '#jornada-ouro'
-  },
-  {
-    image: champion4,
-    tag: 'Ganhe Dinheiro com Edição',
-    title: 'Editor de Respeito',
-    buttonText: 'Saber Mais',
-    buttonVariant: 'warning' as const,
-    link: '#editor'
   }
 ];
 
