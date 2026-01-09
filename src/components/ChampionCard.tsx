@@ -4,6 +4,7 @@ import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
 interface ChampionCardProps {
   image: string;
   tag: string;
+  tagColor?: string;
   title: string;
   buttonText: string;
   buttonVariant: 'primary' | 'secondary' | 'accent' | 'warning';
@@ -17,7 +18,7 @@ const buttonStyles = {
   warning: 'bg-warning hover:bg-warning/90 text-warning-foreground',
 };
 
-const ChampionCard = ({ image, tag, title, buttonText, buttonVariant, link = '#' }: ChampionCardProps) => {
+const ChampionCard = ({ image, tag, tagColor, title, buttonText, buttonVariant, link = '#' }: ChampionCardProps) => {
   const ref = useRef<HTMLDivElement>(null);
   const [isHovered, setIsHovered] = useState(false);
   
@@ -85,7 +86,8 @@ const ChampionCard = ({ image, tag, title, buttonText, buttonVariant, link = '#'
         style={{ transform: 'translateZ(50px)' }}
       >
         <motion.span 
-          className="text-xs sm:text-sm tracking-[0.3em] text-muted-foreground mb-4 uppercase font-body font-medium"
+          className="text-xs sm:text-sm tracking-[0.3em] mb-4 uppercase font-body font-medium"
+          style={{ color: tagColor || 'hsl(var(--muted-foreground))' }}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1 }}
