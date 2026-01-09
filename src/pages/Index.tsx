@@ -12,8 +12,7 @@ const champions = [
     buttonText: 'Saber Mais',
     buttonVariant: 'primary' as const,
     link: '#jornada-bronze',
-    imagePosition: 'center 20%',
-    contentOffset: '60px'
+    imagePosition: 'center 20%'
   },
   {
     image: champion2,
@@ -23,8 +22,7 @@ const champions = [
     buttonText: 'Quero Participar',
     buttonVariant: 'secondary' as const,
     link: '#tres-pilares',
-    imagePosition: 'center 15%',
-    contentOffset: '-40px'
+    imagePosition: 'center 15%'
   },
   {
     image: champion3,
@@ -34,8 +32,7 @@ const champions = [
     buttonText: 'Saber Mais',
     buttonVariant: 'accent' as const,
     link: '#jornada-ouro',
-    imagePosition: 'center 25%',
-    contentOffset: '0px'
+    imagePosition: 'center 25%'
   }
 ];
 
