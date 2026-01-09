@@ -8,30 +8,30 @@ const champions = [
     image: champion1,
     tag: 'Avançado',
     tagColor: '#E340E2',
-    title: 'Jornada do Bronze ao Grão-Mestre',
+    title: 'Acompanhamento Individual Personalizado',
     buttonText: 'Saber Mais',
     buttonVariant: 'primary' as const,
-    link: '#jornada-bronze',
+    link: 'https://wolfacademycoach.lovable.app/#coach-individual',
     imagePosition: 'center 20%'
   },
   {
     image: champion2,
     tag: 'Intermediário',
     tagColor: '#E340E2',
-    title: 'Os Três Pilares para Subir de Elo',
+    title: 'O Segredo de Todas as Lanes até o Mestre',
     buttonText: 'Quero Participar',
     buttonVariant: 'secondary' as const,
-    link: '#tres-pilares',
+    link: 'https://wolfacademygg.lovable.app/',
     imagePosition: 'center 15%'
   },
   {
     image: champion3,
     tag: 'Valorant',
     tagColor: '#E340E2',
-    title: 'Jornada ao Ouro em 27 Dias',
+    title: 'A Jornada até o Ascendente',
     buttonText: 'Saber Mais',
     buttonVariant: 'accent' as const,
-    link: '#jornada-ouro',
+    link: 'https://wolfacademyggvlr.lovable.app/',
     imagePosition: 'center 25%'
   }
 ];
