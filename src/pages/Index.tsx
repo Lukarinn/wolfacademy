@@ -7,6 +7,7 @@ const champions = [
   {
     image: champion1,
     tag: 'Avançado',
+    tagColor: '#E340E2',
     title: 'Jornada do Bronze ao Grão-Mestre',
     buttonText: 'Saber Mais',
     buttonVariant: 'primary' as const,
@@ -14,7 +15,8 @@ const champions = [
   },
   {
     image: champion2,
-    tag: 'Gratuito',
+    tag: 'Intermediário',
+    tagColor: '#E340E2',
     title: 'Os Três Pilares para Subir de Elo',
     buttonText: 'Quero Participar',
     buttonVariant: 'secondary' as const,
@@ -22,7 +24,8 @@ const champions = [
   },
   {
     image: champion3,
-    tag: 'Intermediário',
+    tag: 'Valorant',
+    tagColor: '#E340E2',
     title: 'Jornada ao Ouro em 27 Dias',
     buttonText: 'Saber Mais',
     buttonVariant: 'accent' as const,
