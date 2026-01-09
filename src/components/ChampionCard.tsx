@@ -10,6 +10,7 @@ interface ChampionCardProps {
   buttonVariant: 'primary' | 'secondary' | 'accent' | 'warning';
   link?: string;
   imagePosition?: string;
+  contentOffset?: string;
 }
 
 const buttonStyles = {
@@ -19,7 +20,7 @@ const buttonStyles = {
   warning: 'bg-warning hover:bg-warning/90 text-warning-foreground',
 };
 
-const ChampionCard = ({ image, tag, tagColor, title, buttonText, buttonVariant, link = '#', imagePosition = 'center top' }: ChampionCardProps) => {
+const ChampionCard = ({ image, tag, tagColor, title, buttonText, buttonVariant, link = '#', imagePosition = 'center top', contentOffset = '0px' }: ChampionCardProps) => {
   const ref = useRef<HTMLDivElement>(null);
   const [isHovered, setIsHovered] = useState(false);
   
@@ -92,7 +93,7 @@ const ChampionCard = ({ image, tag, tagColor, title, buttonText, buttonVariant, 
       {/* Content */}
       <div 
         className="relative z-10 h-full flex flex-col items-center justify-center px-6 text-center"
-        style={{ transform: 'translateZ(50px)' }}
+        style={{ transform: 'translateZ(50px)', marginTop: contentOffset }}
       >
         <motion.span 
           className="text-xs sm:text-sm tracking-[0.3em] mb-4 uppercase font-body font-medium"
