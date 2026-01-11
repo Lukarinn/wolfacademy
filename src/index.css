@@ -73,4 +73,10 @@ All colors MUST be HSL.
   body {
     @apply bg-background text-foreground;
   }
+
+  /* Attempt to hide the Lovable badge (may not affect externally injected badges) */
+  #lovable-badge {
+    display: none !important;
+  }
 }
+
