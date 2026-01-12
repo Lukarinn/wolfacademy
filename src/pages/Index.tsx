@@ -11,7 +11,7 @@ const champions = [
     title: 'Acompanhamento Individual Personalizado',
     buttonText: 'Saber Mais',
     buttonVariant: 'primary' as const,
-    link: '/coach',
+    link: 'https://wolfacademycoach.lovable.app/',
     imagePosition: 'center 20%'
   },
   {
@@ -21,7 +21,7 @@ const champions = [
     title: 'O Segredo de Todas as Lanes até o Mestre',
     buttonText: 'Quero Participar',
     buttonVariant: 'secondary' as const,
-    link: '/lol',
+    link: 'https://wolfacademygg.lovable.app/',
     imagePosition: 'center 15%'
   },
   {
@@ -31,7 +31,7 @@ const champions = [
     title: 'A Jornada até o Ascendente',
     buttonText: 'Saber Mais',
     buttonVariant: 'accent' as const,
-    link: '/valorant',
+    link: 'https://wolfacademyggvlr.lovable.app/',
     imagePosition: 'center 25%'
   }
 ];
