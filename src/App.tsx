@@ -5,10 +5,9 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
-import RedirectCoach from "./pages/RedirectCoach";
+import Coach from "./pages/Coach";
 import RedirectLol from "./pages/RedirectLol";
 import RedirectValorant from "./pages/RedirectValorant";
-
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -19,7 +18,7 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
-          <Route path="/coach" element={<RedirectCoach />} />
+          <Route path="/coach" element={<Coach />} />
           <Route path="/lol" element={<RedirectLol />} />
           <Route path="/valorant" element={<RedirectValorant />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
