@@ -10,6 +10,8 @@ interface ChampionCardProps {
   buttonVariant: 'primary' | 'secondary' | 'accent' | 'warning';
   link?: string;
   imagePosition?: string;
+  grayscale?: boolean;
+  disabled?: boolean;
 }
 
 const buttonStyles = {
@@ -19,7 +21,7 @@ const buttonStyles = {
   warning: 'bg-warning hover:bg-warning/90 text-warning-foreground',
 };
 
-const ChampionCard = ({ image, tag, tagColor, title, buttonText, buttonVariant, link = '#', imagePosition = 'center top' }: ChampionCardProps) => {
+const ChampionCard = ({ image, tag, tagColor, title, buttonText, buttonVariant, link = '#', imagePosition = 'center top', grayscale = false, disabled = false }: ChampionCardProps) => {
   const ref = useRef<HTMLDivElement>(null);
   const [isHovered, setIsHovered] = useState(false);
   
@@ -74,8 +76,10 @@ const ChampionCard = ({ image, tag, tagColor, title, buttonText, buttonVariant, 
           objectPosition: imagePosition,
         }}
         animate={{
-          scale: isHovered ? 1.1 : 1,
-          filter: isHovered ? 'brightness(1)' : 'brightness(0.5)',
+          scale: isHovered && !disabled ? 1.1 : 1,
+          filter: grayscale 
+            ? 'grayscale(100%) brightness(0.4)' 
+            : (isHovered ? 'brightness(1)' : 'brightness(0.5)'),
         }}
         transition={{ duration: 0.4 }}
       />
@@ -114,13 +118,14 @@ const ChampionCard = ({ image, tag, tagColor, title, buttonText, buttonVariant, 
         </motion.h2>
         
         <motion.a
-          href={link}
-          className={`px-8 py-3 text-sm uppercase tracking-[0.2em] font-medium rounded transition-all duration-300 ${buttonStyles[buttonVariant]}`}
+          href={disabled ? undefined : link}
+          className={`px-8 py-3 text-sm uppercase tracking-[0.2em] font-medium rounded transition-all duration-300 ${buttonStyles[buttonVariant]} ${disabled ? 'opacity-60 cursor-not-allowed' : ''}`}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 }}
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
+          whileHover={disabled ? {} : { scale: 1.05 }}
+          whileTap={disabled ? {} : { scale: 0.95 }}
+          onClick={disabled ? (e) => e.preventDefault() : undefined}
         >
           {buttonText}
         </motion.a>

@@ -29,10 +29,12 @@ const champions = [
     tag: 'Valorant',
     tagColor: '#E340E2',
     title: 'A Jornada até o Ascendente',
-    buttonText: 'Saber Mais',
+    buttonText: 'EM BREVE',
     buttonVariant: 'accent' as const,
-    link: 'https://wolfacademyggvlr.lovable.app/',
-    imagePosition: 'center 25%'
+    link: '#',
+    imagePosition: 'center 25%',
+    grayscale: true,
+    disabled: true
   }
 ];
 
