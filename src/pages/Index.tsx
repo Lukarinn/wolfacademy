@@ -18,7 +18,7 @@ const champions = [
     image: champion2,
     tag: 'Intermediário',
     tagColor: '#E340E2',
-    title: 'O Segredo de Todas as Lanes até o Mestre',
+    title: 'OS SEGREDOS de Todas as Lanes até o Mestre',
     buttonText: 'Quero Participar',
     buttonVariant: 'secondary' as const,
     link: 'https://wolfacademygg.lovable.app/',
