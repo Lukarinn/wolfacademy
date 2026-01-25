@@ -10,7 +10,10 @@ const app = (
   </BrowserRouter>
 );
 
-if (import.meta.env.PROD) {
+// Use hydration only when there's pre-rendered content (SSG)
+const hasPrerenderedContent = root.innerHTML.trim() !== '' && !root.innerHTML.includes('<!--app-html-->');
+
+if (hasPrerenderedContent) {
   hydrateRoot(root, app);
 } else {
   createRoot(root).render(app);
