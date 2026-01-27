@@ -1,31 +1,34 @@
+import { Helmet } from 'react-helmet-async';
 import ChampionCard from '@/components/ChampionCard';
-import champion1 from '@/assets/champion-1.jpg';
-import champion2 from '@/assets/champion-2.jpg';
-import champion3 from '@/assets/champion-3.jpg';
+import coachIndividualImg from '@/assets/coach-individual-lol-league-of-legends.jpg';
+import cursoLoLImg from '@/assets/curso-lol-segredos-lanes-mestre.jpg';
+import cursoValorantImg from '@/assets/curso-valorant-jornada-ascendente.jpg';
 
 const champions = [
   {
-    image: champion1,
+    image: coachIndividualImg,
     tag: 'Avançado',
     tagColor: '#E340E2',
     title: 'Acompanhamento Individual Personalizado',
     buttonText: 'Saber Mais',
     buttonVariant: 'primary' as const,
     link: 'https://wolfacademycoach.lovable.app/#coach-individual',
-    imagePosition: 'center 20%'
+    imagePosition: 'center 20%',
+    altText: 'Coach individual de League of Legends - Acompanhamento personalizado para subir de elo'
   },
   {
-    image: champion2,
+    image: cursoLoLImg,
     tag: 'Intermediário',
     tagColor: '#E340E2',
     title: 'OS SEGREDOS de Todas as Lanes até o Mestre',
     buttonText: 'Quero Participar',
     buttonVariant: 'secondary' as const,
     link: 'https://wolfacademygg.lovable.app/',
-    imagePosition: 'center 15%'
+    imagePosition: 'center 15%',
+    altText: 'Curso completo de League of Legends - Aprenda os segredos de todas as lanes até o Mestre'
   },
   {
-    image: champion3,
+    image: cursoValorantImg,
     tag: 'Valorant',
     tagColor: '#E340E2',
     title: 'A Jornada até o Ascendente',
@@ -34,17 +37,35 @@ const champions = [
     link: '#',
     imagePosition: 'center 25%',
     grayscale: true,
-    disabled: true
+    disabled: true,
+    altText: 'Curso de Valorant - A jornada até o Ascendente - Em breve'
   }
 ];
 
 const Index = () => {
   return (
-    <main className="flex flex-col md:flex-row min-h-screen w-full overflow-hidden">
-      {champions.map((champion, index) => (
-        <ChampionCard key={index} {...champion} />
-      ))}
-    </main>
+    <>
+      <Helmet>
+        <title>Wolf Academy | Coach de LoL e Valorant - Suba de Elo Rápido</title>
+        <meta name="description" content="🐺 Wolf Academy - Coaching profissional de League of Legends e Valorant. Método exclusivo para subir de elo rapidamente. Coaches experientes, sigilo total e acompanhamento personalizado." />
+        <link rel="canonical" href="https://wolfacademy.lovable.app/" />
+        <meta property="og:title" content="Wolf Academy | Coach de LoL e Valorant - Suba de Elo Rápido" />
+        <meta property="og:description" content="🐺 Coaching profissional de League of Legends e Valorant. Método exclusivo para subir de elo." />
+        <meta property="og:url" content="https://wolfacademy.lovable.app/" />
+      </Helmet>
+      
+      <main className="flex flex-col md:flex-row min-h-screen w-full overflow-hidden" role="main">
+        <header className="sr-only">
+          <h1>Wolf Academy - Coaching Profissional de League of Legends e Valorant</h1>
+        </header>
+        
+        <section aria-label="Nossos Cursos e Serviços" className="contents">
+          {champions.map((champion, index) => (
+            <ChampionCard key={index} {...champion} />
+          ))}
+        </section>
+      </main>
+    </>
   );
 };
 

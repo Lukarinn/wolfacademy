@@ -8,6 +8,7 @@ import NotFound from "./pages/NotFound";
 import Coach from "./pages/Coach";
 import RedirectLol from "./pages/RedirectLol";
 import RedirectValorant from "./pages/RedirectValorant";
+
 const queryClient = new QueryClient();
 
 const App = () => (

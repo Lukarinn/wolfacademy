@@ -40,7 +40,7 @@ const CoachPlans = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="font-display text-4xl md:text-5xl mb-4">ESCOLHA SEU PLANO</h2>
+          <h2 className="font-display text-4xl md:text-5xl mb-4">Planos de Coaching League of Legends</h2>
           <p className="text-muted-foreground text-lg">Selecione o pacote que melhor se adapta aos seus objetivos.</p>
         </motion.div>
 
@@ -62,7 +62,7 @@ const CoachPlans = () => {
                 </div>
               )}
               
-              <h3 className="font-display text-2xl mb-2">{plan.name}</h3>
+              <h3 className="font-display text-2xl mb-2" itemProp="name">{plan.name}</h3>
               <p className="text-muted-foreground mb-6">{plan.description}</p>
 
               <ul className="space-y-3 mb-8">

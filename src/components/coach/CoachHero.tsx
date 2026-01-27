@@ -28,7 +28,7 @@ const CoachHero = () => {
           transition={{ delay: 0.3 }}
           className="font-display text-6xl md:text-8xl tracking-wide mb-6"
         >
-          DOMINE O <span className="text-[#E340E2]">RIFT</span>
+          Coach Individual de <span className="text-[#E340E2]">League of Legends</span>
         </motion.h1>
 
         <motion.p
