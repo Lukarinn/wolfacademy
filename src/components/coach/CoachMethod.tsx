@@ -28,7 +28,7 @@ const CoachMethod = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="font-display text-4xl md:text-5xl mb-4">NOSSO MÉTODO</h2>
+          <h2 className="font-display text-4xl md:text-5xl mb-4">Nosso Método de Coaching LoL</h2>
           <p className="text-muted-foreground text-lg">Um sistema estruturado para acelerar sua evolução no jogo.</p>
         </motion.div>
 
@@ -45,7 +45,7 @@ const CoachMethod = () => {
               <span className="text-6xl font-display text-[#E340E2]/20 absolute top-4 right-4">
                 {step.number}
               </span>
-              <h3 className="font-display text-2xl mb-4 text-[#E340E2]">{step.title}</h3>
+              <h3 className="font-display text-2xl mb-4 text-[#E340E2]" aria-label={`Passo ${step.number}: ${step.title}`}>{step.title}</h3>
               <p className="text-muted-foreground">{step.description}</p>
             </motion.div>
           ))}

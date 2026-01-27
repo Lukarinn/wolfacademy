@@ -12,6 +12,7 @@ interface ChampionCardProps {
   imagePosition?: string;
   grayscale?: boolean;
   disabled?: boolean;
+  altText?: string;
 }
 
 const buttonStyles = {
@@ -21,7 +22,19 @@ const buttonStyles = {
   warning: 'bg-warning hover:bg-warning/90 text-warning-foreground',
 };
 
-const ChampionCard = ({ image, tag, tagColor, title, buttonText, buttonVariant, link = '#', imagePosition = 'center top', grayscale = false, disabled = false }: ChampionCardProps) => {
+const ChampionCard = ({ 
+  image, 
+  tag, 
+  tagColor, 
+  title, 
+  buttonText, 
+  buttonVariant, 
+  link = '#', 
+  imagePosition = 'center top', 
+  grayscale = false, 
+  disabled = false,
+  altText
+}: ChampionCardProps) => {
   const ref = useRef<HTMLDivElement>(null);
   const [isHovered, setIsHovered] = useState(false);
   
@@ -53,84 +66,97 @@ const ChampionCard = ({ image, tag, tagColor, title, buttonText, buttonVariant, 
     y.set(0);
   };
 
+  // Generate SEO-friendly alt text
+  const imageAlt = altText || `${title} - Wolf Academy`;
+
   return (
-    <motion.div
-      ref={ref}
-      className="relative flex-1 h-screen overflow-hidden cursor-pointer"
-      style={{
-        rotateX,
-        rotateY,
-        scale,
-        transformStyle: 'preserve-3d',
-      }}
-      onMouseMove={handleMouseMove}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={handleMouseLeave}
+    <article
+      aria-label={title}
+      className="relative flex-1 h-screen overflow-hidden"
     >
-      {/* Background Image */}
-      <motion.img
-        src={image}
-        alt=""
-        className="absolute inset-0 w-full h-full object-cover"
+      <motion.div
+        ref={ref}
+        className="relative w-full h-full cursor-pointer"
         style={{
-          objectPosition: imagePosition,
+          rotateX,
+          rotateY,
+          scale,
+          transformStyle: 'preserve-3d',
         }}
-        animate={{
-          scale: isHovered && !disabled ? 1.1 : 1,
-          filter: grayscale 
-            ? 'grayscale(100%) brightness(0.4)' 
-            : (isHovered ? 'brightness(1)' : 'brightness(0.5)'),
-        }}
-        transition={{ duration: 0.4 }}
-      />
-      
-      {/* Overlay */}
-      <motion.div 
-        className="absolute inset-0 bg-gradient-to-t from-background/95 via-background/40 to-background/20"
-        animate={{
-          opacity: isHovered ? 0.3 : 1,
-        }}
-        transition={{ duration: 0.4 }}
-      />
-      
-      {/* Content */}
-      <div 
-        className="relative z-10 h-full flex flex-col items-center justify-center px-6 text-center"
-        style={{ transform: 'translateZ(50px)' }}
+        onMouseMove={handleMouseMove}
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={handleMouseLeave}
       >
-        <motion.span 
-          className="text-xs sm:text-sm tracking-[0.3em] mb-4 uppercase font-body font-medium"
-          style={{ color: tagColor || 'hsl(var(--muted-foreground))' }}
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.1 }}
-        >
-          {tag}
-        </motion.span>
+        {/* Background Image with SEO Alt Text */}
+        <motion.img
+          src={image}
+          alt={imageAlt}
+          loading="lazy"
+          className="absolute inset-0 w-full h-full object-cover"
+          style={{
+            objectPosition: imagePosition,
+          }}
+          animate={{
+            scale: isHovered && !disabled ? 1.1 : 1,
+            filter: grayscale 
+              ? 'grayscale(100%) brightness(0.4)' 
+              : (isHovered ? 'brightness(1)' : 'brightness(0.5)'),
+          }}
+          transition={{ duration: 0.4 }}
+        />
         
-        <motion.h2 
-          className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-foreground mb-8 leading-tight max-w-xs uppercase"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2 }}
-        >
-          {title}
-        </motion.h2>
+        {/* Overlay */}
+        <motion.div 
+          className="absolute inset-0 bg-gradient-to-t from-background/95 via-background/40 to-background/20"
+          animate={{
+            opacity: isHovered ? 0.3 : 1,
+          }}
+          transition={{ duration: 0.4 }}
+          aria-hidden="true"
+        />
         
-        <motion.a
-          href={disabled ? undefined : link}
-          className={`px-8 py-3 text-sm uppercase tracking-[0.2em] font-medium rounded transition-all duration-300 ${buttonStyles[buttonVariant]} ${disabled ? 'opacity-60 cursor-not-allowed' : ''}`}
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3 }}
-          whileHover={disabled ? {} : { scale: 1.05 }}
-          whileTap={disabled ? {} : { scale: 0.95 }}
-          onClick={disabled ? (e) => e.preventDefault() : undefined}
+        {/* Content with Semantic Structure */}
+        <div 
+          className="relative z-10 h-full flex flex-col items-center justify-center px-6 text-center"
+          style={{ transform: 'translateZ(50px)' }}
         >
-          {buttonText}
-        </motion.a>
-      </div>
-    </motion.div>
+          <motion.span 
+            className="text-xs sm:text-sm tracking-[0.3em] mb-4 uppercase font-body font-medium"
+            style={{ color: tagColor || 'hsl(var(--muted-foreground))' }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.1 }}
+          >
+            {tag}
+          </motion.span>
+          
+          {/* H2 for each card - semantic hierarchy */}
+          <motion.h2 
+            className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-foreground mb-8 leading-tight max-w-xs uppercase"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2 }}
+          >
+            {title}
+          </motion.h2>
+          
+          <motion.a
+            href={disabled ? undefined : link}
+            className={`px-8 py-3 text-sm uppercase tracking-[0.2em] font-medium rounded transition-all duration-300 ${buttonStyles[buttonVariant]} ${disabled ? 'opacity-60 cursor-not-allowed' : ''}`}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3 }}
+            whileHover={disabled ? {} : { scale: 1.05 }}
+            whileTap={disabled ? {} : { scale: 0.95 }}
+            onClick={disabled ? (e) => e.preventDefault() : undefined}
+            aria-label={disabled ? `${buttonText} - Indisponível` : `${buttonText} - ${title}`}
+            aria-disabled={disabled}
+          >
+            {buttonText}
+          </motion.a>
+        </div>
+      </motion.div>
+    </article>
   );
 };
 

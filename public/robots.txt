@@ -1,8 +1,18 @@
+# Wolf Academy - Robots.txt
+# https://wolfacademy.lovable.app
+
+# Permitir todos os bots de busca
+User-agent: *
+Allow: /
+
+# Bots específicos importantes
 User-agent: Googlebot
 Allow: /
+Crawl-delay: 1
 
 User-agent: Bingbot
 Allow: /
+Crawl-delay: 1
 
 User-agent: Twitterbot
 Allow: /
@@ -10,5 +20,16 @@ Allow: /
 User-agent: facebookexternalhit
 Allow: /
 
-User-agent: *
+User-agent: LinkedInBot
 Allow: /
+
+User-agent: WhatsApp
+Allow: /
+
+# Bloquear páginas que não devem ser indexadas
+Disallow: /api/
+Disallow: /_next/
+Disallow: /admin/
+
+# Sitemap
+Sitemap: https://wolfacademy.lovable.app/sitemap.xml

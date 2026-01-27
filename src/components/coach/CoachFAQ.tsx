@@ -35,7 +35,7 @@ const CoachFAQ = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="font-display text-4xl md:text-5xl mb-4">PERGUNTAS FREQUENTES</h2>
+          <h2 className="font-display text-4xl md:text-5xl mb-4">Perguntas Frequentes sobre Coaching LoL</h2>
         </motion.div>
 
         <motion.div
