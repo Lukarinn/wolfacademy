@@ -28,12 +28,4 @@
     <priority>0.7</priority>
   </url>
   
-  <!-- Redirecionamento Valorant -->
-  <url>
-    <loc>https://wolfacademy.lovable.app/valorant</loc>
-    <lastmod>2026-01-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
 </urlset>

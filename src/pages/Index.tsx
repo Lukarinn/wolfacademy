@@ -2,7 +2,7 @@ import { Helmet } from 'react-helmet-async';
 import ChampionCard from '@/components/ChampionCard';
 import coachIndividualImg from '@/assets/coach-individual-lol-league-of-legends.jpg';
 import cursoLoLImg from '@/assets/curso-lol-segredos-lanes-mestre.jpg';
-import cursoValorantImg from '@/assets/curso-valorant-jornada-ascendente.jpg';
+import cursoGratuitoImg from '@/assets/curso-lol-gratuito.jpg';
 
 const champions = [
   {
@@ -28,17 +28,17 @@ const champions = [
     altText: 'Curso completo de League of Legends - Aprenda os segredos de todas as lanes até o Mestre'
   },
   {
-    image: cursoValorantImg,
-    tag: 'Valorant',
+    image: cursoGratuitoImg,
+    tag: 'Gratuito',
     tagColor: '#E340E2',
-    title: 'A Jornada até o Ascendente',
+    title: 'Conteúdo Gratuito de LoL',
     buttonText: 'EM BREVE',
     buttonVariant: 'accent' as const,
     link: '#',
-    imagePosition: 'center 25%',
+    imagePosition: 'center 30%',
     grayscale: true,
     disabled: true,
-    altText: 'Curso de Valorant - A jornada até o Ascendente - Em breve'
+    altText: 'Conteúdo gratuito de League of Legends - Dicas e estratégias grátis - Em breve'
   }
 ];
 
@@ -46,17 +46,17 @@ const Index = () => {
   return (
     <>
       <Helmet>
-        <title>Wolf Academy | Coach de LoL e Valorant - Suba de Elo Rápido</title>
-        <meta name="description" content="🐺 Wolf Academy - Coaching profissional de League of Legends e Valorant. Método exclusivo para subir de elo rapidamente. Coaches experientes, sigilo total e acompanhamento personalizado." />
+        <title>Wolf Academy | Coach de LoL - Suba de Elo Rápido</title>
+        <meta name="description" content="🐺 Wolf Academy - Coaching profissional de League of Legends. Método exclusivo para subir de elo rapidamente. Coaches experientes, sigilo total e acompanhamento personalizado." />
         <link rel="canonical" href="https://wolfacademy.lovable.app/" />
-        <meta property="og:title" content="Wolf Academy | Coach de LoL e Valorant - Suba de Elo Rápido" />
-        <meta property="og:description" content="🐺 Coaching profissional de League of Legends e Valorant. Método exclusivo para subir de elo." />
+        <meta property="og:title" content="Wolf Academy | Coach de LoL - Suba de Elo Rápido" />
+        <meta property="og:description" content="🐺 Coaching profissional de League of Legends. Método exclusivo para subir de elo." />
         <meta property="og:url" content="https://wolfacademy.lovable.app/" />
       </Helmet>
       
       <main className="flex flex-col md:flex-row min-h-screen w-full overflow-hidden" role="main">
         <header className="sr-only">
-          <h1>Wolf Academy - Coaching Profissional de League of Legends e Valorant</h1>
+          <h1>Wolf Academy - Coaching Profissional de League of Legends</h1>
         </header>
         
         <section aria-label="Nossos Cursos e Serviços" className="contents">
