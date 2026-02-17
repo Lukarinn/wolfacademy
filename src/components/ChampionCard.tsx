@@ -130,9 +130,9 @@ const ChampionCard = ({
             {tag}
           </motion.span>
           
-          {/* H2 for each card - semantic hierarchy */}
+          {/* H2 for each card - fixed height for alignment */}
           <motion.h2 
-            className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-foreground mb-8 leading-tight max-w-xs uppercase"
+            className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-foreground mb-8 leading-tight max-w-xs uppercase min-h-[4.5rem] sm:min-h-[5.5rem] md:min-h-[7rem] lg:min-h-[9rem] flex items-center"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
