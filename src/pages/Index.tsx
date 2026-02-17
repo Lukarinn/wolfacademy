@@ -31,14 +31,12 @@ const champions = [
     image: cursoGratuitoImg,
     tag: 'Gratuito',
     tagColor: '#E340E2',
-    title: 'Conteúdo Gratuito de LoL',
-    buttonText: 'EM BREVE',
+    title: 'O Que É a Wolf Academy?',
+    buttonText: 'SABER MAIS',
     buttonVariant: 'accent' as const,
-    link: '#',
+    link: 'https://wolfacademyaulagratis.lovable.app',
     imagePosition: 'center 30%',
-    grayscale: true,
-    disabled: true,
-    altText: 'Conteúdo gratuito de League of Legends - Dicas e estratégias grátis - Em breve'
+    altText: 'O que é a Wolf Academy - Conheça nossa academia de League of Legends'
   }
 ];
 
