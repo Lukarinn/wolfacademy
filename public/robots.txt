@@ -1,5 +1,5 @@
 # Wolf Academy - Robots.txt
-# https://wolfacademy.lovable.app
+# https://www.wolfacademy.shop
 
 # Permitir todos os bots de busca
 User-agent: *
@@ -32,4 +32,4 @@ Disallow: /_next/
 Disallow: /admin/
 
 # Sitemap
-Sitemap: https://wolfacademy.lovable.app/sitemap.xml
+Sitemap: https://www.wolfacademy.shop/sitemap.xml
