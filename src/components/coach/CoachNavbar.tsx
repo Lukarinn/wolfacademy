@@ -18,7 +18,7 @@ const CoachNavbar = () => {
     >
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         <a href="/" className="flex items-center gap-2">
-          <img src={wolfLogo} alt="Wolf Academy" className="h-8 w-auto" />
+          <img src={wolfLogo} alt="Wolf Academy - Logo coaching de LoL" className="h-8 w-auto" />
           <span className="font-display text-xl text-foreground tracking-wide">
             WOLF<span className="text-[#E340E2]">ACADEMY</span>
           </span>
