@@ -45,8 +45,8 @@ const jsonLd = {
   "@type": "EducationalOrganization",
   "name": "Wolf Academy",
   "description": "Coaching profissional de League of Legends. Método exclusivo para subir de elo rapidamente com coaches experientes.",
-  "url": "https://wolfacademy.lovable.app",
-  "logo": "https://wolfacademy.lovable.app/favicon.png",
+  "url": "https://www.wolfacademy.shop",
+  "logo": "https://www.wolfacademy.shop/favicon.png",
   "sameAs": [],
   "offers": [
     {
@@ -80,13 +80,14 @@ const Index = () => {
       <Helmet>
         <title>Wolf Academy | Coach de LoL - Suba de Elo Rápido</title>
         <meta name="description" content="🐺 Wolf Academy - Coaching profissional de League of Legends. Método exclusivo para subir de elo rapidamente. Coaches experientes, sigilo total e acompanhamento personalizado." />
-        <link rel="canonical" href="https://wolfacademy.lovable.app/" />
+        <link rel="canonical" href="https://www.wolfacademy.shop/" />
+        <meta name="robots" content="index, follow" />
         
         {/* Open Graph */}
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Wolf Academy | Coach de LoL - Suba de Elo Rápido" />
         <meta property="og:description" content="🐺 Coaching profissional de League of Legends. Método exclusivo para subir de elo com coaches experientes e acompanhamento personalizado." />
-        <meta property="og:url" content="https://wolfacademy.lovable.app/" />
+        <meta property="og:url" content="https://www.wolfacademy.shop/" />
         <meta property="og:site_name" content="Wolf Academy" />
         <meta property="og:image" content="https://storage.googleapis.com/gpt-engineer-file-uploads/QIxNfZ749RfYFzFbwNPgvohLwVt1/social-images/social-1767920937410-Camada 2.png" />
         <meta property="og:image:width" content="1200" />

@@ -6,7 +6,7 @@
   
   <!-- Página Principal - Wolf Academy -->
   <url>
-    <loc>https://wolfacademy.lovable.app/</loc>
+    <loc>https://www.wolfacademy.shop/</loc>
     <lastmod>2026-02-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -14,7 +14,7 @@
   
   <!-- Coach Individual de LoL -->
   <url>
-    <loc>https://wolfacademy.lovable.app/coach</loc>
+    <loc>https://www.wolfacademy.shop/coach</loc>
     <lastmod>2026-02-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -22,7 +22,7 @@
   
   <!-- Redirecionamento Curso LoL -->
   <url>
-    <loc>https://wolfacademy.lovable.app/lol</loc>
+    <loc>https://www.wolfacademy.shop/lol</loc>
     <lastmod>2026-02-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
