@@ -13,7 +13,7 @@ const CoachMarquee = () => {
       >
         {items.map((_, index) => (
           <div key={index} className="flex items-center gap-3">
-            <img src={wolfLogo} alt="Wolf Academy" className="h-6 w-auto" />
+            <img src={wolfLogo} alt="Wolf Academy - Coach profissional de League of Legends" className="h-6 w-auto" />
             <span className="font-display text-lg text-white tracking-wider">WOLF ACADEMY</span>
           </div>
         ))}

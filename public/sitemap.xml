@@ -4,26 +4,26 @@
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
   
-  <!-- Página Principal -->
+  <!-- Página Principal - Wolf Academy -->
   <url>
     <loc>https://wolfacademy.lovable.app/</loc>
-    <lastmod>2026-01-27</lastmod>
+    <lastmod>2026-02-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   
-  <!-- Página de Coach Individual -->
+  <!-- Coach Individual de LoL -->
   <url>
     <loc>https://wolfacademy.lovable.app/coach</loc>
-    <lastmod>2026-01-27</lastmod>
+    <lastmod>2026-02-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   
-  <!-- Redirecionamento LoL -->
+  <!-- Redirecionamento Curso LoL -->
   <url>
     <loc>https://wolfacademy.lovable.app/lol</loc>
-    <lastmod>2026-01-27</lastmod>
+    <lastmod>2026-02-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

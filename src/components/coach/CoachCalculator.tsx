@@ -71,7 +71,7 @@ const CoachCalculator = () => {
           >
             <h3 className="font-display text-xl mb-4">Elo Atual</h3>
             <div className="flex justify-center mb-4">
-              <img src={elos[currentElo].img} alt={elos[currentElo].name} className="w-24 h-24 object-contain" />
+              <img src={elos[currentElo].img} alt={`Elo ${elos[currentElo].name} no League of Legends - Ranking atual`} className="w-24 h-24 object-contain" />
             </div>
             <div className="space-y-4">
               <div>
@@ -117,7 +117,7 @@ const CoachCalculator = () => {
           >
             <h3 className="font-display text-xl mb-4">Elo Desejado</h3>
             <div className="flex justify-center mb-4">
-              <img src={elos[targetElo].img} alt={elos[targetElo].name} className="w-24 h-24 object-contain" />
+              <img src={elos[targetElo].img} alt={`Elo ${elos[targetElo].name} no League of Legends - Ranking desejado`} className="w-24 h-24 object-contain" />
             </div>
             <div className="space-y-4">
               <div>
@@ -168,12 +168,12 @@ const CoachCalculator = () => {
 
             <div className="flex items-center justify-center gap-4 mb-6">
               <div className="text-center">
-                <img src={elos[currentElo].img} alt={elos[currentElo].name} className="w-12 h-12 object-contain mx-auto" />
+                <img src={elos[currentElo].img} alt={`Elo atual: ${elos[currentElo].name}`} className="w-12 h-12 object-contain mx-auto" />
                 <span className="text-sm">{elos[currentElo].name} {divisions[currentDiv]}</span>
               </div>
               <span className="text-2xl text-[#E340E2]">→</span>
               <div className="text-center">
-                <img src={elos[targetElo].img} alt={elos[targetElo].name} className="w-12 h-12 object-contain mx-auto" />
+                <img src={elos[targetElo].img} alt={`Elo desejado: ${elos[targetElo].name}`} className="w-12 h-12 object-contain mx-auto" />
                 <span className="text-sm">{elos[targetElo].name} {divisions[targetDiv]}</span>
               </div>
             </div>
